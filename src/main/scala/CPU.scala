@@ -16,6 +16,8 @@ class Frontend extends Module {
     val mem = new FrontMemoryIO
   }
 
+  // Includes: icache, BTB, predictor, decoder, renamer
+
 }
 
 class Engine extends Module {
@@ -24,6 +26,8 @@ class Engine extends Module {
     val front = new FrontEngineIO().flip
     val back = new BackEngineIO().flip
   }
+
+  // Includes: centralized RS, functional units
 
 }
 
@@ -34,6 +38,8 @@ class Backend extends Module {
     val front = new FrontBackIO().flip
     val mem = new BackMemoryIO
   }
+
+  // Includes: ROB, store buffer, dcache
  
 }
 
