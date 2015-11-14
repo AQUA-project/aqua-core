@@ -16,7 +16,7 @@ class Frontend extends Module {
     val mem = new FrontMemoryIO
   }
 
-  // Includes: icache, BTB, predictor, decoder, renamer
+  // Includes: icache, BTB, predictor, decoder, renamer, tlb
 
 }
 
@@ -39,7 +39,7 @@ class Backend extends Module {
     val mem = new BackMemoryIO
   }
 
-  // Includes: ROB, store buffer, dcache
+  // Includes: ROB, store buffer, dcache, tlb
  
 }
 
